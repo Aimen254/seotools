@@ -1,0 +1,27 @@
+name: Deploy to Live on Merge to Main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    if: github.event.pusher.name != 'github-actions[bot]' # prevent loops
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Deploy to Live Server
+        run: |
+          ssh -o StrictHostKeyChecking=no -p 18765 u2083-9go3ou7bpjsg@ssh.alltoolsfree.com "\
+            cd public_html && \
+            git pull origin main \
+          "
