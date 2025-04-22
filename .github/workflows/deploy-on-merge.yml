@@ -22,6 +22,6 @@ jobs:
       - name: Deploy to Live Server
         run: |
           ssh -o StrictHostKeyChecking=no -p 18765 u2083-9go3ou7bpjsg@ssh.alltoolsfree.com "\
-            cd alltoolsfree.com/public_html && \
+            cd www/alltoolsfree.com/public_html && \
             git pull origin main \
           "
