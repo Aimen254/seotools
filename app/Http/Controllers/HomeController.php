@@ -60,7 +60,7 @@ class HomeController extends Controller
             ->orderBy('name', 'asc')
             ->get();
 
-        return view('home.index', ['plans' => $plans, 'tools' => $tools]);
+        return view('home.index2', ['plans' => $plans, 'tools' => $tools]);
     }
 
     /**
