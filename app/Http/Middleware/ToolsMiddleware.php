@@ -18,9 +18,9 @@ class ToolsMiddleware
     public function handle(Request $request, Closure $next)
     {
         // If Guest tools are not enabled and the user is Guest
-        if (!config('settings.tools_guest') && Auth::guest()) {
-            return redirect()->route('login');
-        }
+        // if (!config('settings.tools_guest') && Auth::guest()) {
+        //     return redirect()->route('login');
+        // }
 
         return $next($request);
     }

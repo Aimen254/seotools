@@ -20,7 +20,7 @@
                         </div>
                     @else
                         @include('shared.breadcrumbs', ['breadcrumbs' => [
-                            ['url' => route('dashboard'), 'title' => __('Home')],
+                            ['url' => route('home'), 'title' => __('Home')],
                             ['title' => __('Tools')],
                         ]])
 
