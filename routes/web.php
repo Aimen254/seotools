@@ -55,6 +55,8 @@ Route::post('/analyze', 'HomeController@storeReport')->middleware('throttle:10,1
 
 // Contact routes
 Route::get('/contact', 'ContactController@index')->name('contact');
+Route::get('/terms', 'ContactController@terms')->name('terms');
+Route::get('/privacy', 'ContactController@privacy')->name('privacy');
 Route::post('/contact', 'ContactController@send')->middleware('throttle:5,10');
 
 // Page routes

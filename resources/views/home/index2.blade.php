@@ -67,11 +67,11 @@
                         </div>
                     </div>
                 @else
-                    <div class="col-12 col-md-auto p-2">
+                    <!-- <div class="col-12 col-md-auto p-2">
                         @if(config('settings.demo_url'))
                             <a href="{{ config('settings.demo_url') }}" target="_blank" class="btn btn-outline-primary btn-lg btn-block font-size-lg d-inline-flex align-items-center justify-content-center">{{ __('Demo') }} @include('icons.external', ['class' => 'fill-current width-3 height-3 ' . (__('lang_dir') == 'rtl' ? 'mr-2' : 'ml-2')])</a>
                         @endif
-                    </div>
+                    </div> -->
                 @endif
             </div>
         </div>
@@ -104,11 +104,6 @@
             @if(config('settings.tools_guest'))
                 <div class="text-center"><a href="{{ route('tools') }}" class="btn btn-outline-primary btn-lg font-size-lg mt-5">{{ __('View all') }}</a></div>
             @endif
-        </div>
-        <div class="row justify-content-center align-items-center mb-2">
-            <div class="col-12 col-md-auto p-2 text-center">
-                <a href="{{ route('tools') }}" class="btn btn-primary btn-lg btn-block font-size-lg d-inline-flex align-items-center justify-content-center">{{ __('View All') }}</a>
-            </div>
         </div>
     </div>
     <div class="bg-base-1 overflow-hidden">
