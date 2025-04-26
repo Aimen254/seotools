@@ -38,4 +38,15 @@ class ContactController extends Controller
 
         return redirect()->route('contact')->with('success', __('Thank you!').' '.__('We\'ve received your message.'));
     }
+
+    
+    public function terms()
+    {
+        return view('terms.index');
+    }
+
+    public function privacy()
+    {
+        return view('privacy.index');
+    }
 }
