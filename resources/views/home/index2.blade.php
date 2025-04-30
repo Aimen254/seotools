@@ -11,7 +11,7 @@
     <div class="bg-base-0 position-relative pt-5 pt-sm-6">
         <div class="container position-relative py-sm-5 z-1">
             <h1 class="display-4 text-center text-break font-weight-bold mb-0">
-                {{ __('Free Online Tools for SEO, Coding & Content Creation') }}
+                {{ __('Free Online Tools for SEO, Coding & Content Creation' ) }}
             </h1>
 
             <p class="text-muted text-center text-break font-size-xl font-weight-normal mt-4 mb-5">
