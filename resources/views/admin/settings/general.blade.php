@@ -38,6 +38,16 @@
             </div>
 
             <div class="form-group">
+                <label for="i-description">{{ __('Description') }}</label>
+                <textarea name="description" id="i-description" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}">{{ old('description') ?? config('settings.description') }}</textarea>
+                @if ($errors->has('description'))
+                    <span class="invalid-feedback d-block" role="alert">
+                        <strong>{{ $errors->first('description') }}</strong>
+                    </span>
+                @endif
+            </div>
+
+            <div class="form-group">
                 <label for="i-index">{{ __('Custom index') }}</label>
                 <input type="text" dir="ltr" name="index" id="i-index" class="form-control{{ $errors->has('index') ? ' is-invalid' : '' }}" value="{{ old('index') ?? config('settings.index') }}">
                 @if ($errors->has('index'))

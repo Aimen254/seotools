@@ -25,9 +25,9 @@
                             </li>
                         @endif
 
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}" role="button">{{ __('Login') }}</a>
-                        </li>
+                        </li> -->
 
                         @if(config('settings.registration'))
                             <li class="nav-item d-flex align-items-center">
