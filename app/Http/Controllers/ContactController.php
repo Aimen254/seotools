@@ -49,4 +49,9 @@ class ContactController extends Controller
     {
         return view('privacy.index');
     }
+
+    public function about()
+    {
+        return view('about.index');
+    }
 }

@@ -5,6 +5,9 @@
                 <div class="col-12 col-lg">
                     <ul class="nav p-0 mx-n3 mb-3 mb-lg-0 d-flex flex-column flex-lg-row">
                         <li class="nav-item d-flex">
+                            <a href="{{ route('about') }}" class="nav-link py-1">{{ __('About') }}</a>
+                        </li>
+                        <li class="nav-item d-flex">
                             <a href="{{ route('contact') }}" class="nav-link py-1">{{ __('Contact') }}</a>
                         </li>
 
