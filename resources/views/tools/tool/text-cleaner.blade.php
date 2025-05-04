@@ -1,8 +1,5 @@
-@section('site_title', formatTitle([__('Text cleaner'), __('Tool'), config('settings.title')]))
-
-@section('head_content')
-    <meta name="description" content="{{ __($tool->description) }}">
-@endsection
+@section('site_title', formatTitle('Free Text Cleaner Tool | Remove Extra Spaces & Format Text | AllToolsFree.com'))
+@section('site_description', formatTitle('Clean and format messy text instantly with our free online text cleaner. Remove extra spaces, line breaks, and unwanted formatting to perfect your content. No registration required.'))
 
 @include('shared.breadcrumbs', ['breadcrumbs' => [
     ['url' => route('dashboard'), 'title' => __('Home')],
@@ -130,3 +127,192 @@
         </div>
     </div>
 @endif
+<div class="card border-0 shadow-sm mt-4 p-3">
+    <div class="card-body">
+        <h1 class="h3 mb-3">Text Cleaner Tool – Instantly Clean, Format & Optimize Your Text</h1>
+
+        <div class="alert alert-info mb-4">
+            <div class="d-flex">
+                <div class="mr-3">🧹</div>
+                <div>Quickly remove HTML tags, extra spaces, line breaks, and more from your content with our powerful, free Text Cleaner Tool.</div>
+            </div>
+        </div>
+
+        <div class="d-flex flex-wrap mb-4">
+            <span class="badge badge-success mr-2 mb-2">✅ Free & Fast</span>
+            <span class="badge badge-primary mr-2 mb-2">✅ No Signup Required</span>
+            <span class="badge badge-info mb-2">✅ Works Instantly</span>
+        </div>
+
+        <h2 class="h4 mb-3">Benefits of Using AllToolsFree’s Text Cleaner</h2>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="h6 mb-3">🧼 Remove Unwanted Elements</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li>Extra spaces & line breaks</li>
+                            <li>Special characters</li>
+                            <li>HTML tags</li>
+                            <li>Non-ASCII characters</li>
+                            <li>Repeated punctuation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="h6 mb-3">📄 Improve Readability</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li>Consistent spacing and paragraph breaks</li>
+                            <li>Better formatting for web or print</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="h6 mb-3">🔍 SEO-Friendly Text</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li>Removes invisible formatting</li>
+                            <li>Improves crawlability</li>
+                            <li>Reduces page load size</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="h6 mb-3">📱 Cross-Platform</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li>Works on mobile, tablet, desktop</li>
+                            <li>Fully responsive design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="h4 mb-3 mt-4">How to Use the Text Cleaner Tool</h2>
+        <div class="table-responsive mb-4">
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Step</th>
+                        <th>Action</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Paste your messy text</td>
+                        <td>Input is ready for cleaning</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Click “Clean Text”</td>
+                        <td>Text is instantly cleaned</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Copy or download result</td>
+                        <td>Use cleaned text as needed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="h4 mb-3">Who Can Use the Text Cleaner?</h2>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="h6 mb-3">✏️ Writers & Bloggers</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li>Clean content copied from Word/PDF</li>
+                            <li>Get professional formatting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="h6 mb-3">🎓 Students & Educators</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li>Ensure well-formatted assignments</li>
+                            <li>Remove accidental artifacts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="h6 mb-3">💼 Developers & Webmasters</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li>Strip HTML/code artifacts</li>
+                            <li>Prepare clean content for CMS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="h4 mb-3 mt-4">More Features at a Glance</h2>
+        <ul class="mb-4">
+            <li>Real-time cleaning with one click</li>
+            <li>Custom checkboxes for cleaning options</li>
+            <li>No installation or signup required</li>
+            <li>Privacy-focused – data never stored</li>
+        </ul>
+
+        <div class="card rounded-5 bg-primary mt-4 p-4 shadow-lg text-white">
+            <h3 class="h5 mb-3">💡 Pro Tip</h3>
+            <p>Use the Text Cleaner Tool before publishing to avoid invisible errors, broken tags, or formatting bugs that affect SEO and readability.</p>
+        </div>
+
+        <h2 class="h4 mb-3 mt-4">Explore More Tools on AllToolsFree</h2>
+        <div class="row">
+            <div class="col-md-4 mb-2">
+                <a href="#" class="text-dark d-block">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center">
+                            <div class="mb-2">📄</div>
+                            <div class="font-weight-medium">Word Counter</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-2">
+                <a href="#" class="text-dark d-block">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center">
+                            <div class="mb-2">🖍️</div>
+                            <div class="font-weight-medium">Case Converter</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-2">
+                <a href="#" class="text-dark d-block">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center">
+                            <div class="mb-2">🧬</div>
+                            <div class="font-weight-medium">Slug Generator</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <p class="mt-4">Try the Text Cleaner Tool Now — <strong>100% Free</strong> and accessible at <a href="https://alltolsfree.com/text-cleaner" target="_blank">alltolsfree.com/text-cleaner</a></p>
+    </div>
+</div>

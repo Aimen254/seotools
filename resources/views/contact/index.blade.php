@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('site_title', formatTitle([__('Contact'), config('settings.title')]))
+@section('site_title', formatTitle('Contact Us | Free Online Tools Support | AllToolsFree.com'))
+@section('site_description', formatTitle('Need help with our free online tools? Contact the AllToolsFree.com team for support, feedback, or partnership inquiries. We offer 100+ free tools for developers, writers & SEO professionals.'))
 
 @section('head_content')
 

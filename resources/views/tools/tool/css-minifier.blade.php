@@ -1,8 +1,6 @@
-@section('site_title', formatTitle([__('CSS minifier'), __('Tool'), config('settings.title')]))
+@section('site_title', formatTitle('Free CSS Minifier Tool | Compress & Optimize CSS Online | AllToolsFree.com'))
+@section('site_description', formatTitle('Reduce CSS file size instantly with our free online CSS minifier tool. Remove comments, whitespace & optimize stylesheets for faster loading websites. Part of 50+ free developer tools at AllToolsFree.'))
 
-@section('head_content')
-    <meta name="description" content="{{ __($tool->description) }}">
-@endsection
 
 @include('shared.breadcrumbs', ['breadcrumbs' => [
     ['url' => route('dashboard'), 'title' => __('Home')],
@@ -88,3 +86,304 @@
         </div>
     </div>
 @endif
+<div class="card border-0 shadow-sm mt-4 p-3">
+    <div class="card-body">
+        <h1 class="h3 mb-3">CSS Minifier Tool - Free Online CSS Compressor</h1>
+        
+        <div class="alert alert-info mb-4">
+            <div class="d-flex">
+                <div class="mr-3">⚡</div>
+                <div>Optimize your website's performance by compressing CSS files to improve loading speeds and enhance SEO rankings. Perfect for developers and designers.</div>
+            </div>
+        </div>
+
+        <div class="d-flex flex-wrap mb-4">
+            <span class="badge badge-success mr-2 mb-2">✅ 100% Free</span>
+            <span class="badge badge-primary mr-2 mb-2">✅ Instant Processing</span>
+            <span class="badge badge-info mb-2">✅ No Installation</span>
+        </div>
+
+        <h2 class="h4 mb-3">Why Use Our CSS Minifier?</h2>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="h6 mb-3">🚀 Performance Boost</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-1">Reduce file size by 30-70%</li>
+                            <li class="mb-1">Improve page load speed</li>
+                            <li>Enhance Core Web Vitals</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="h6 mb-3">🧹 Code Optimization</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-1">Remove whitespace & comments</li>
+                            <li>Eliminate redundant syntax</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="h6 mb-3">🔒 Security Enhancement</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-1">Obfuscate CSS code</li>
+                            <li>Make reverse-engineering harder</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="h6 mb-3">🔄 Framework Support</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-1">Works with Bootstrap, Tailwind</li>
+                            <li>Handles SASS/LESS output</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="h4 mb-3 mt-4">How to Minify CSS</h2>
+        
+        <div class="table-responsive mb-4">
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Step</th>
+                        <th>Action</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Paste CSS or upload file</td>
+                        <td>System analyzes your stylesheet</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Click "Minify CSS"</td>
+                        <td>Instant compression processing</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Copy/download output</td>
+                        <td>Ready for production use</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="h4 mb-3">Key Features</h2>
+        
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="h6 mb-3">📉 Size Reduction</h3>
+                        <p>Shrinks CSS files significantly without breaking functionality</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="h6 mb-3">⚡ Fast Processing</h3>
+                        <p>Minifies thousands of lines in seconds</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="h6 mb-3">📤 Easy Export</h3>
+                        <p>Copy to clipboard or download .css files</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card rounded-5 bg-success mt-4 p-4 shadow-lg text-white">
+            <h3 class="h5 mb-3">💡 Pro Developer Tip</h3>
+            <p>For maximum performance:</p>
+            <ul class="mb-0">
+                <li>Minify CSS during build process</li>
+                <li>Combine with Gzip compression</li>
+                <li>Use with HTTP/2 for best results</li>
+            </ul>
+        </div>
+
+        <h2 class="h4 mb-3 mt-4">Who Uses CSS Minifier?</h2>
+        
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="h6 mb-3">👨‍💻 Web Developers</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-1">Optimize production code</li>
+                            <li>Improve PageSpeed scores</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="h6 mb-3">🎨 Front-End Designers</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-1">Clean up style sheets</li>
+                            <li>Prepare assets for deployment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="h6 mb-3">📈 SEO Specialists</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-1">Boost site speed</li>
+                            <li>Improve Core Web Vitals</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="h4 mb-3 mt-4">CSS Minification Comparison</h2>
+        
+        <div class="table-responsive mb-4">
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Metric</th>
+                        <th>Original CSS</th>
+                        <th>Minified CSS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>File Size</strong></td>
+                        <td>150KB</td>
+                        <td>45KB (70% smaller)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Load Time</strong></td>
+                        <td>500ms</td>
+                        <td>150ms</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Readability</strong></td>
+                        <td>Human-friendly</td>
+                        <td>Machine-optimized</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="h4 mb-3">Frequently Asked Questions</h2>
+        
+        <div class="accordion mb-4" id="faqAccordion">
+            <div class="card border-0 shadow-sm mb-2">
+                <div class="card-header bg-white" id="headingOne">
+                    <h3 class="mb-0">
+                        <button class="btn btn-link text-dark" type="button" data-toggle="collapse" data-target="#collapseOne">
+                            Does minifying CSS break functionality?
+                        </button>
+                    </h3>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        No! Our tool only removes unnecessary characters while preserving all styling rules.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card border-0 shadow-sm mb-2">
+                <div class="card-header bg-white" id="headingTwo">
+                    <h3 class="mb-0">
+                        <button class="btn btn-link text-dark collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo">
+                            Is this CSS minifier free to use?
+                        </button>
+                    </h3>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        ✅ Yes! AllToolsFree provides unlimited minification with no hidden costs.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card border-0 shadow-sm mb-2">
+                <div class="card-header bg-white" id="headingThree">
+                    <h3 class="mb-0">
+                        <button class="btn btn-link text-dark collapsed" type="button" data-toggle="collapse" data-target="#collapseThree">
+                            Can I minify frameworks like Bootstrap?
+                        </button>
+                    </h3>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Absolutely! Our tool works with all CSS frameworks including Bootstrap, Tailwind, and Foundation.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <h3 class="h5 mb-3">Explore More Optimization Tools</h3>
+                <div class="row">
+                    <div class="col-md-4 mb-2">
+                        <a href="#" class="text-dark d-block">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-body text-center">
+                                    <div class="mb-2">📄</div>
+                                    <div class="font-weight-medium">HTML Minifier</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                        <a href="#" class="text-dark d-block">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-body text-center">
+                                    <div class="mb-2">📜</div>
+                                    <div class="font-weight-medium">JavaScript Minifier</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                        <a href="#" class="text-dark d-block">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-body text-center">
+                                    <div class="mb-2">🖼️</div>
+                                    <div class="font-weight-medium">Image Compressor</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
