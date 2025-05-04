@@ -1,7 +1,6 @@
 @extends('layouts.app')
-
-@section('site_title', formatTitle([__('Terms of Service'), config('settings.title')]))
-
+@section('site_title', formatTitle('Terms of Service | AllToolsFree - Free Online Tools'))
+@section('site_description', formatTitle('Review our Terms of Service for using AllToolsFree.com - Your trusted platform for free DNS lookup, development tools, content converters & more.'))
 @section('head_content')
 @endsection
 
@@ -13,62 +12,107 @@
 
                 <div class="text-center mb-5">
                     <h1 class="display-4 font-weight-bold">{{ __('Terms of Service') }}</h1>
-                    <p class="text-muted mt-2"><strong>Last updated:</strong> April 25, 2025</p>
+                    <p class="text-muted mt-2"><strong>Last updated:</strong> {{ date('F j, Y') }}</p>
                 </div>
 
                 <div class="border-top pt-4 mt-4">
-                    <p>Welcome to <strong>AllToolsFree.com</strong>. Please read these Terms of Service ("Terms", "Terms of Service") carefully before using our website and any services, tools, or content operated by AllToolsFree.com ("us", "we", or "our").</p>
-                    <p>By accessing or using the website, you agree to be bound by these Terms. If you disagree with any part of the terms, please do not use our website.</p>
+                    <p>Welcome to <strong>AllToolsFree.com</strong>, your premier destination for free online tools including <a href="#" class="text-primary">DNS lookup</a>, <a href="#" class="text-primary">SEO analyzers</a>, and <a href="#" class="text-primary">content optimization utilities</a>. These Terms govern your use of our 50+ free web tools.</p>
                 </div>
 
                 <div class="border-top pt-4 mt-5">
-                    <h2 class="h4 font-weight-bold mb-3">1. Use of Our Services</h2>
-                    <p>AllToolsFree.com provides free access to a variety of tools for SEO, content creation, web development, and more. You may use these tools for personal and commercial purposes, subject to compliance with these Terms.</p>
-                    <p><strong>You agree to:</strong></p>
+                    <h2 class="h4 font-weight-bold mb-3">1. Acceptable Use of Tools</h2>
+                    <p>AllToolsFree.com provides three categories of free tools:</p>
+                    
+                    <div class="card border-0 shadow-lg mt-3 mb-4 bg-success">
+                        <div class="card-body">
+                            <h3 class="h5 text-white">🔍 Research Tools</h3>
+                            <p class="text-white">DNS lookup, WHOIS lookup, SSL checker, and other technical utilities for website analysis.</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 shadow-lg mb-4 bg-success">
+                        <div class="card-body">
+                            <h3 class="h5 text-white">💻 Development Tools</h3>
+                            <p class="text-white">Code minifiers, validators, and generators including JSON validator, HTML minifier, and password generator.</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 shadow-lg bg-success">
+                        <div class="card-body">
+                            <h3 class="h5 text-white">✍️ Content Tools</h3>
+                            <p class="text-white">Word counter, text cleaner, case converter and other writing/SEO optimization utilities.</p>
+                        </div>
+                    </div>
+
+                    <p class="mt-4"><strong>You agree not to:</strong></p>
                     <ul class="list-unstyled pl-4">
-                        <li class="mb-2">• Use the tools only for lawful purposes.</li>
-                        <li class="mb-2">• Not use the tools to harm, disrupt, or interfere with other users or services.</li>
-                        <li class="mb-2">• Not attempt to copy, reverse engineer, or exploit our services without permission.</li>
+                        <li class="mb-2">• Use our <a href="#" class="text-primary">SEO tools</a> for spam or blackhat techniques</li>
+                        <li class="mb-2">• Overload our servers with automated requests to tools like our <a href="#" class="text-primary">API validators</a></li>
+                        <li class="mb-2">• Scrape or redistribute tool outputs commercially without permission</li>
                     </ul>
                 </div>
 
                 <div class="border-top pt-4 mt-5">
-                    <h2 class="h4 font-weight-bold mb-3">2. Intellectual Property</h2>
-                    <p>All content, logos, designs, software, and other materials displayed on AllToolsFree.com are the property of AllToolsFree.com or our content providers. Unauthorized use or duplication is strictly prohibited.</p>
-                </div>
-
-                <div class="border-top pt-4 mt-5">
-                    <h2 class="h4 font-weight-bold mb-3">3. Disclaimer</h2>
-                    <p>AllToolsFree.com provides its tools and services <strong>as-is</strong> without warranties of any kind, either express or implied. We do not guarantee the accuracy, reliability, or suitability of any tool output.</p>
-                </div>
-
-                <div class="border-top pt-4 mt-5">
-                    <h2 class="h4 font-weight-bold mb-3">4. Third-Party Links</h2>
-                    <p>Our website may contain links to third-party websites or services. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
-                </div>
-
-                <div class="border-top pt-4 mt-5">
-                    <h2 class="h4 font-weight-bold mb-3">5. Changes to Terms</h2>
-                    <p>We reserve the right to update or change these Terms at any time without prior notice. Changes will be effective immediately once posted on this page. Continued use of our website means you accept those changes.</p>
-                </div>
-
-                <div class="border-top pt-4 mt-5">
-                    <h2 class="h4 font-weight-bold mb-3">6. Privacy</h2>
-                    <p>Please review our <a href="{{ route('privacy') }}" class="text-primary font-weight-bold">Privacy Policy</a> for information on how we collect, use, and protect your information.</p>
-                </div>
-
-                <div class="border-top pt-4 mt-5">
-                    <h2 class="h4 font-weight-bold mb-3">7. Limitation of Liability</h2>
-                    <p>To the fullest extent permitted by law, AllToolsFree.com shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues related to your use of our services.</p>
-                </div>
-
-                <div class="border-top pt-4 mt-5">
-                    <h2 class="h4 font-weight-bold mb-3">8. Contact Us</h2>
-                    <p>If you have any questions about these Terms, please contact us at:</p>
+                    <h2 class="h4 font-weight-bold mb-3">2. Content Ownership</h2>
+                    <p>When using our <a href="#" class="text-primary">content tools</a> (word counter, text converter, etc.):</p>
                     <ul class="list-unstyled pl-4">
-                        <li class="mb-2">📧 <strong>Email:</strong> {{ config('settings.contact_email') }}</li>
-                        <li class="mb-2">🌐 <strong>Website:</strong> <a href="https://www.alltoolsfree.com" class="text-primary font-weight-bold" target="_blank">www.alltoolsfree.com</a></li>
+                        <li class="mb-2">• You retain ownership of all submitted content</li>
+                        <li class="mb-2">• We never store or claim rights to your documents</li>
+                        <li class="mb-2">• Tool outputs may not be used for illegal purposes</li>
                     </ul>
+                </div>
+
+                <div class="border-top pt-4 mt-5">
+                    <h2 class="h4 font-weight-bold mb-3">3. Tool Accuracy</h2>
+                    <p>While we strive for accuracy in tools like our <a href="#" class="text-primary">SEO analyzers</a> and <a href="#" class="text-primary">code validators</a>:</p>
+                    <ul class="list-unstyled pl-4">
+                        <li class="mb-2">• Results are provided "as-is" without guarantees</li>
+                        <li class="mb-2">• Technical tools (SSL checker, DNS lookup) rely on third-party data</li>
+                        <li class="mb-2">• Always verify critical results independently</li>
+                    </ul>
+                </div>
+
+                <div class="border-top pt-4 mt-5">
+                    <h2 class="h4 font-weight-bold mb-3">4. Prohibited Activities</h2>
+                    <p>When using our <a href="#" class="text-primary">developer tools</a> or <a href="#" class="text-primary">research utilities</a>, you may not:</p>
+                    <ul class="list-unstyled pl-4">
+                        <li class="mb-2">• Reverse engineer tools like our <a href="#" class="text-primary">minifiers</a> or <a href="#" class="text-primary">converters</a></li>
+                        <li class="mb-2">• Create automated scripts that overload our services</li>
+                        <li class="mb-2">• Use our <a href="#" class="text-primary">network tools</a> for illegal surveillance</li>
+                    </ul>
+                </div>
+
+                <div class="border-top pt-4 mt-5">
+                    <h2 class="h4 font-weight-bold mb-3">5. Changes to Tools</h2>
+                    <p>We continuously improve our <a href="#" class="text-primary">free toolset</a> and may:</p>
+                    <ul class="list-unstyled pl-4">
+                        <li class="mb-2">• Add/remove tools (currently offering 50+ utilities)</li>
+                        <li class="mb-2">• Change tool interfaces and functionality</li>
+                        <li class="mb-2">• Implement usage limits if needed</li>
+                    </ul>
+                </div>
+
+                <div class="border-top pt-4 mt-5">
+                    <h2 class="h4 font-weight-bold mb-3">6. Privacy Commitment</h2>
+                    <p>Our <a href="{{ route('privacy') }}" class="text-primary font-weight-bold">Privacy Policy</a> details how we handle data across all tools:</p>
+                    <ul class="list-unstyled pl-4">
+                        <li class="mb-2">• No registration required for most tools</li>
+                        <li class="mb-2">• Inputs to tools like <a href="#" class="text-primary">text analyzers</a> are never stored</li>
+                        <li class="mb-2">• Minimal analytics to improve service quality</li>
+                    </ul>
+                </div>
+
+                <div class="border-top pt-4 mt-5">
+                    <h2 class="h4 font-weight-bold mb-3">7. Contact Our Team</h2>
+                    <p>For questions about tool usage or these Terms:</p>
+                    <div class="card border-0 shadow-lg mt-3 bg-success">
+                        <div class="card-body">
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2 text-white">📧 <strong>Tool Support:</strong> {{ config('settings.contact_email') }}</li>
+                                <li class="text-white">🌐 <strong>Visit:</strong> <a href="https://www.alltoolsfree.com" class="text-primary font-weight-bold" target="_blank">AllToolsFree.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
             </div>

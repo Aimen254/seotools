@@ -1,7 +1,6 @@
 @extends('layouts.app')
-
-@section('site_title', formatTitle([__('Tools'), config('settings.title')]))
-
+@section('site_title', formatTitle('Free Online Tools for Developers, SEO & Content Creators | AllToolsFree.com'))
+@section('site_description', formatTitle('100+ free web tools for DNS lookup, code minification, text conversion & SEO analysis. No registration needed - instant access to developer, content & research tools.'))
 @section('head_content')
 
 @endsection
@@ -13,9 +12,9 @@
                 <div class="col-12">
                     @if(config('settings.tools_guest') && !Auth::check())
                         <div class="text-center mt-3 mb-5">
-                            <h1 class="h2 my-3 d-inline-block">{{ __('Tools') }}</h1>
+                            <h1 class="h2 my-3 d-inline-block">{{ __('Powerful, Free Online Tools for Every Need') }}</h1>
                             <div class="m-auto">
-                                <p class="text-muted font-weight-normal font-size-lg mb-0">{{ __('Web tools and utilities.') }}</p>
+                                <p class="text-muted font-weight-normal font-size-lg mb-0">{{ __('Powerful, Free Online Tools for Every Need') }}</p>
                             </div>
                         </div>
                     @else
