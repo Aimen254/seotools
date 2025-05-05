@@ -4,7 +4,7 @@
 @section('site_description', formatTitle('Need help with our free online tools? Contact the AllToolsFree.com team for support, feedback, or partnership inquiries. We offer 100+ free tools for developers, writers & SEO professionals.'))
 
 @section('head_content')
-
+<link rel="canonical" href="{{ route('contact') }}" />
 @endsection
 
 @section('content')

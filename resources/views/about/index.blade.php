@@ -3,6 +3,7 @@
 @section('site_title', formatTitle('About Us - Free Tools for Everyone | alltoolsfree'))
 @section('site_description', formatTitle('Free online tools for coding, SEO & content creation. No login required. Fast, simple, ad-supported tools trusted by users worldwide.'))
 @section('head_content')
+<link rel="canonical" href="{{ route('about') }}" />
 @endsection
 
 @section('content')
@@ -45,7 +46,7 @@
                             </div>
 
                             {{-- Right Image --}}
-                            <div class="col-12 col-lg-7 d-none d-lg-flex bg-dark background-size-cover background-position-center" style="background-image: url({{ asset('img/contact.svg') }});">
+                            <div class="col-12 col-lg-7 d-none d-lg-flex bg-dark background-size-cover background-position-center" style="background-image: url({{ asset('img/about.svg') }});">
                                 <div class="p-5 text-light d-flex align-items-center">
                                     <div class="{{ (__('lang_dir') == 'rtl' ? 'mr-5' : 'ml-5') }}">
                                         <div class="h2 font-weight-bold">{{ __('About Us') }}</div>
