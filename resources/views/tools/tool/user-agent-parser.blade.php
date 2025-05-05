@@ -2,7 +2,7 @@
 @section('site_description', formatTitle('Parse and decode any User-Agent string with our free online tool. Identify browsers, devices, operating systems, and more for development and analytics. Instant results, no registration needed.'))
 
 @include('shared.breadcrumbs', ['breadcrumbs' => [
-    ['url' => route('dashboard'), 'title' => __('Home')],
+    ['url' => auth()->check() ? route('dashboard') : route('home'), 'title' => __('Home')],
     ['url' => route('tools'), 'title' => __('Tools')],
     ['title' => __('Tool')],
 ]])

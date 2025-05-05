@@ -2,7 +2,7 @@
 @section('site_description', formatTitle('Check and analyze meta tags of any website with our free online tool. Get detailed insights on title, description, keywords & other meta tags for better SEO optimization.'))
 
 @include('shared.breadcrumbs', ['breadcrumbs' => [
-    ['url' => route('dashboard'), 'title' => __('Home')],
+    ['url' => auth()->check() ? route('dashboard') : route('home'), 'title' => __('Home')],
     ['url' => route('tools'), 'title' => __('Tools')],
     ['title' => __('Tool')],
 ]])

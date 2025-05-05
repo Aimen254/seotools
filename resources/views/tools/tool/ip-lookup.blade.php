@@ -2,7 +2,7 @@
 @section('site_description', formatTitle('Instantly lookup any IP address to find geolocation, ISP, hostname & network details. Our free IP lookup tool provides comprehensive data for developers, network admins & security professionals.'))
 
 @include('shared.breadcrumbs', ['breadcrumbs' => [
-    ['url' => route('dashboard'), 'title' => __('Home')],
+    ['url' => auth()->check() ? route('dashboard') : route('home'), 'title' => __('Home')],
     ['url' => route('tools'), 'title' => __('Tools')],
     ['title' => __('Tool')],
 ]])

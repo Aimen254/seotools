@@ -1,7 +1,7 @@
 @section('site_title', formatTitle('Free Uptime Calculator | Calculate Website Availability | AllToolsFree.com'))
 @section('site_description', formatTitle('Easily calculate your website uptime percentage & downtime with our free online tool. Essential for webmasters, developers & IT professionals to monitor service reliability.'))
 @include('shared.breadcrumbs', ['breadcrumbs' => [
-    ['url' => route('dashboard'), 'title' => __('Home')],
+    ['url' => auth()->check() ? route('dashboard') : route('home'), 'title' => __('Home')],
     ['url' => route('tools'), 'title' => __('Tools')],
     ['title' => __('Tool')],
 ]])

@@ -1,7 +1,7 @@
 @section('site_title', formatTitle('Free Word Density Counter Tool | Analyze Keyword Density | AllToolsFree.com'))
 @section('site_description', formatTitle('Check word density and keyword frequency in your text with our free online tool. Perfect for SEO optimization, content analysis, and improving search rankings. No registration required.'))
 @include('shared.breadcrumbs', ['breadcrumbs' => [
-    ['url' => route('dashboard'), 'title' => __('Home')],
+    ['url' => auth()->check() ? route('dashboard') : route('home'), 'title' => __('Home')],
     ['url' => route('tools'), 'title' => __('Tools')],
     ['title' => __('Tool')],
 ]])

@@ -1,7 +1,7 @@
 @section('site_title', formatTitle('Free Password Generator Tool | Create Strong & Secure Passwords | AllToolsFree.com'))  
 @section('site_description', formatTitle('Generate strong, random, and secure passwords instantly with our free online password generator. Perfect for enhancing account security—customize length, symbols, and complexity. No registration needed.'))  
 @include('shared.breadcrumbs', ['breadcrumbs' => [
-    ['url' => route('dashboard'), 'title' => __('Home')],
+    ['url' => auth()->check() ? route('dashboard') : route('home'), 'title' => __('Home')],
     ['url' => route('tools'), 'title' => __('Tools')],
     ['title' => __('Tool')],
 ]])

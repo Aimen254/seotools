@@ -2,7 +2,7 @@
 @section('site_description', formatTitle('Minify & compress JavaScript files instantly with our free online JS minifier tool. Reduce file size, improve loading speed, and optimize website performance. No registration required.'))
 
 @include('shared.breadcrumbs', ['breadcrumbs' => [
-    ['url' => route('dashboard'), 'title' => __('Home')],
+    ['url' => auth()->check() ? route('dashboard') : route('home'), 'title' => __('Home')],
     ['url' => route('tools'), 'title' => __('Tools')],
     ['title' => __('Tool')],
 ]])

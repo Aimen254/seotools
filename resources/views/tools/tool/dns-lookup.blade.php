@@ -2,7 +2,7 @@
 @section('site_description', formatTitle('Reduce CSS file size instantly with our free online CSS minifier tool. Remove comments, whitespace & optimize stylesheets for faster loading websites. Part of 50+ free developer tools at AllToolsFree.'))
 
 @include('shared.breadcrumbs', ['breadcrumbs' => [
-    ['url' => route('dashboard'), 'title' => __('Home')],
+    ['url' => auth()->check() ? route('dashboard') : route('home'), 'title' => __('Home')],
     ['url' => route('tools'), 'title' => __('Tools')],
     ['title' => __('Tool')],
 ]])

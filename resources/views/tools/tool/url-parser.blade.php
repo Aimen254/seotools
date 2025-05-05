@@ -1,7 +1,7 @@
 @section('site_title', formatTitle('Free URL Parser | Extract & Analyze URL Components | AllToolsFree.com'))
 @section('site_description', formatTitle('Parse any URL instantly with our free online tool. Extract protocol, domain, path, parameters & more. Essential for developers, SEOs & digital marketers. No registration required.'))
 @include('shared.breadcrumbs', ['breadcrumbs' => [
-    ['url' => route('dashboard'), 'title' => __('Home')],
+    ['url' => auth()->check() ? route('dashboard') : route('home'), 'title' => __('Home')],
     ['url' => route('tools'), 'title' => __('Tools')],
     ['title' => __('Tool')],
 ]])

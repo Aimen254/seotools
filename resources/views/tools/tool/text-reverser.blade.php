@@ -2,7 +2,7 @@
 @section('site_description', formatTitle('Quickly reverse any text online for free with our Text Reverser tool. Perfect for coding, puzzles, or fun social media posts. No signup required – try it now!'))  
 
 @include('shared.breadcrumbs', ['breadcrumbs' => [
-    ['url' => route('dashboard'), 'title' => __('Home')],
+    ['url' => auth()->check() ? route('dashboard') : route('home'), 'title' => __('Home')],
     ['url' => route('tools'), 'title' => __('Tools')],
     ['title' => __('Tool')],
 ]])
