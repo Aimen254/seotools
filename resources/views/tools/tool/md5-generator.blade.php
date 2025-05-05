@@ -2,7 +2,7 @@
 @section('site_description', formatTitle('Generate MD5 hashes instantly with our free online tool. Secure your data, verify file integrity, or use for development purposes. Fast, reliable, and no installation required.'))
 
 @include('shared.breadcrumbs', ['breadcrumbs' => [
-    ['url' => route('dashboard'), 'title' => __('Home')],
+    ['url' => auth()->check() ? route('dashboard') : route('home'), 'title' => __('Home')],
     ['url' => route('tools'), 'title' => __('Tools')],
     ['title' => __('Tool')],
 ]])

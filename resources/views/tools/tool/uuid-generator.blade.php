@@ -2,7 +2,7 @@
 @section('site_description', formatTitle('Generate RFC-compliant UUIDs instantly with our free online tool. Create version 1 or version 4 universally unique identifiers for development, databases & applications. No registration required.'))
 
 @include('shared.breadcrumbs', ['breadcrumbs' => [
-    ['url' => route('dashboard'), 'title' => __('Home')],
+    ['url' => auth()->check() ? route('dashboard') : route('home'), 'title' => __('Home')],
     ['url' => route('tools'), 'title' => __('Tools')],
     ['title' => __('Tool')],
 ]])

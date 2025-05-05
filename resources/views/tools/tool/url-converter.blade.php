@@ -2,7 +2,7 @@
 @section('site_description', formatTitle('Quickly encode or decode URLs with our free online URL converter tool. Perfect for developers, marketers & SEO professionals working with web addresses. No registration required.'))
 
 @include('shared.breadcrumbs', ['breadcrumbs' => [
-    ['url' => route('dashboard'), 'title' => __('Home')],
+    ['url' => auth()->check() ? route('dashboard') : route('home'), 'title' => __('Home')],
     ['url' => route('tools'), 'title' => __('Tools')],
     ['title' => __('Tool')],
 ]])

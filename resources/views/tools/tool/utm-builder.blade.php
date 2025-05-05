@@ -2,7 +2,7 @@
 @section('site_description', formatTitle('Generate perfect UTM parameters for your marketing campaigns with our free online UTM builder. Create trackable URLs for Google Analytics in seconds. No registration required.'))
 
 @include('shared.breadcrumbs', ['breadcrumbs' => [
-    ['url' => route('dashboard'), 'title' => __('Home')],
+    ['url' => auth()->check() ? route('dashboard') : route('home'), 'title' => __('Home')],
     ['url' => route('tools'), 'title' => __('Tools')],
     ['title' => __('Tool')],
 ]])

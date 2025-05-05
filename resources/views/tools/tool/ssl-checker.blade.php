@@ -2,7 +2,7 @@
 @section('site_description', formatTitle('Check SSL certificate validity, issuer, expiration date & security details for any website. Our free online SSL checker helps identify security issues instantly.'))
 
 @include('shared.breadcrumbs', ['breadcrumbs' => [
-    ['url' => route('dashboard'), 'title' => __('Home')],
+    ['url' => auth()->check() ? route('dashboard') : route('home'), 'title' => __('Home')],
     ['url' => route('tools'), 'title' => __('Tools')],
     ['title' => __('Tool')],
 ]])

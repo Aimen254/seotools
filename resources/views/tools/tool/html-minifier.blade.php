@@ -2,7 +2,7 @@
 @section('site_description', formatTitle('Minify your HTML code instantly with our free online tool. Reduce file size, improve page speed & boost SEO performance. Perfect for developers & webmasters. No registration required.'))
 
 @include('shared.breadcrumbs', ['breadcrumbs' => [
-    ['url' => route('dashboard'), 'title' => __('Home')],
+    ['url' => auth()->check() ? route('dashboard') : route('home'), 'title' => __('Home')],
     ['url' => route('tools'), 'title' => __('Tools')],
     ['title' => __('Tool')],
 ]])

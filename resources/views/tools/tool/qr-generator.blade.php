@@ -2,7 +2,7 @@
 @section('site_description', formatTitle('Generate free, customizable QR codes instantly. No registration needed. Perfect for businesses, marketers, and developers. Track scans, change colors, and download high-quality QR images.'))
 
 @include('shared.breadcrumbs', ['breadcrumbs' => [
-    ['url' => route('dashboard'), 'title' => __('Home')],
+    ['url' => auth()->check() ? route('dashboard') : route('home'), 'title' => __('Home')],
     ['url' => route('tools'), 'title' => __('Tools')],
     ['title' => __('Tool')],
 ]])

@@ -2,7 +2,7 @@
 @section('site_description', formatTitle('Check if a website is online or down with our free Website Status Checker. Monitor uptime, detect outages, and verify server responses instantly. No registration needed.'))
 
 @include('shared.breadcrumbs', ['breadcrumbs' => [
-    ['url' => route('dashboard'), 'title' => __('Home')],
+    ['url' => auth()->check() ? route('dashboard') : route('home'), 'title' => __('Home')],
     ['url' => route('tools'), 'title' => __('Tools')],
     ['title' => __('Tool')],
 ]])

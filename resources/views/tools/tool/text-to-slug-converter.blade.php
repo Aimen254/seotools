@@ -2,7 +2,7 @@
 @section('site_description', formatTitle('Convert any text to SEO-friendly URL slugs instantly with our free online tool. Perfect for bloggers, content creators & developers. Create clean, readable slugs for better search engine visibility.'))
 
 @include('shared.breadcrumbs', ['breadcrumbs' => [
-    ['url' => route('dashboard'), 'title' => __('Home')],
+    ['url' => auth()->check() ? route('dashboard') : route('home'), 'title' => __('Home')],
     ['url' => route('tools'), 'title' => __('Tools')],
     ['title' => __('Tool')],
 ]])

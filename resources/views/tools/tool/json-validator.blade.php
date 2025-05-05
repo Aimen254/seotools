@@ -2,7 +2,7 @@
 @section('site_description', formatTitle('Validate, format, and fix JSON data instantly with our free online JSON validator. Perfect for developers, API work, and data analysis. No registration required - quick and easy JSON validation.'))
 
 @include('shared.breadcrumbs', ['breadcrumbs' => [
-    ['url' => route('dashboard'), 'title' => __('Home')],
+    ['url' => auth()->check() ? route('dashboard') : route('home'), 'title' => __('Home')],
     ['url' => route('tools'), 'title' => __('Tools')],
     ['title' => __('Tool')],
 ]])

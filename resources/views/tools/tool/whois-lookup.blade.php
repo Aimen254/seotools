@@ -2,7 +2,7 @@
 @section('site_description', formatTitle('Instantly perform a WHOIS lookup to check domain registration details, ownership, expiry dates & more. Our free tool provides accurate, real-time data for any domain—no registration needed.'))  
 
 @include('shared.breadcrumbs', ['breadcrumbs' => [
-    ['url' => route('dashboard'), 'title' => __('Home')],
+    ['url' => auth()->check() ? route('dashboard') : route('home'), 'title' => __('Home')],
     ['url' => route('tools'), 'title' => __('Tools')],
     ['title' => __('Tool')],
 ]])

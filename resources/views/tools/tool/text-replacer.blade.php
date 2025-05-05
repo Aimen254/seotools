@@ -1,7 +1,7 @@
 @section('site_title', formatTitle('Free Text Replacer Tool | Find & Replace Text Online | AllToolsFree.com'))
 @section('site_description', formatTitle('Quickly find and replace text online with our free Text Replacer tool. Perfect for editing content, code, or bulk text changes. No downloads or registration needed.'))
 @include('shared.breadcrumbs', ['breadcrumbs' => [
-    ['url' => route('dashboard'), 'title' => __('Home')],
+    ['url' => auth()->check() ? route('dashboard') : route('home'), 'title' => __('Home')],
     ['url' => route('tools'), 'title' => __('Tools')],
     ['title' => __('Tool')],
 ]])

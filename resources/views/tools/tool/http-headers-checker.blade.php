@@ -2,7 +2,7 @@
 @section('site_description', formatTitle('Check and analyze HTTP headers of any website with our free online tool. Verify security headers, server information, and improve your website performance. Instant results, no registration required.'))
 
 @include('shared.breadcrumbs', ['breadcrumbs' => [
-    ['url' => route('dashboard'), 'title' => __('Home')],
+    ['url' => auth()->check() ? route('dashboard') : route('home'), 'title' => __('Home')],
     ['url' => route('tools'), 'title' => __('Tools')],
     ['title' => __('Tool')],
 ]])
