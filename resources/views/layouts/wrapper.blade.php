@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="description" content="@yield('site_description')">
     <title>@yield('site_title')</title>
-
+    
     @yield('head_content')
 
     <link href="{{ asset('uploads/brand/' . config('settings.favicon')) }}" rel="icon">
