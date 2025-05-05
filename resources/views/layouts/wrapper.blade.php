@@ -6,7 +6,7 @@
     <meta name="google-site-verification" content="oyrqWsP5yxfyGGJ7SmLA6b-XVptYOk_ETTeWjcsoq7Q" />
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="description" content="@yield('site_title')">
+    <meta name="title" content="@yield('site_title')">
     <meta name="description" content="@yield('site_description')">
     <title>Free Online Tools for Developers, Creators &amp; SEO - alltoolsfree - 100+ Free Online Tools for Developers, SEOs &amp; Content Creators – No Signup Required
     </title>
