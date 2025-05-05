@@ -1,7 +1,7 @@
 @section('site_title', formatTitle('Base64 Encode/Decode Online - Free Converter Tool | AllToolsFree.com'))
 @section('site_description', formatTitle('Easily encode or decode Base64 strings online with our free tool. Part of AllToolsFree.com’s developer toolkit, featuring JSON validators, text converters, and 50+ other web utilities. No registration needed.'))
 @include('shared.breadcrumbs', ['breadcrumbs' => [
-    ['url' => route('dashboard'), 'title' => __('Home')],
+    ['url' => auth()->check() ? route('dashboard') : route('home'), 'title' => __('Home')],
     ['url' => route('tools'), 'title' => __('Tools')],
     ['title' => __('Tool')],
 ]])
