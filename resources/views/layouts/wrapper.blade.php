@@ -8,8 +8,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="title" content="@yield('site_title')">
     <meta name="description" content="@yield('site_description')">
-    <title>Free Online Tools for Developers, Creators &amp; SEO - alltoolsfree - 100+ Free Online Tools for Developers, SEOs &amp; Content Creators – No Signup Required
-    </title>
+    <meta name="google-adsense-account" content="ca-pub-4015233743200895">
+    <title>@yield('site_title')</title>
 
     @yield('head_content')
 
@@ -28,6 +28,8 @@
             {!! config('settings.custom_css') !!}
         </style>
     @endif
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4015233743200895"
+     crossorigin="anonymous"></script>
 </head>
 @yield('body')
 </html>
